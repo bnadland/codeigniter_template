@@ -49,5 +49,3 @@ Start php-fastcgi:
 	$ php-fastcgi -b 127.0.0.1:9000 index.php
 
 Write your code as usual in the application directory.
-
-Hack away!
