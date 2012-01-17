@@ -29,9 +29,9 @@ Edit nginx/nginx.conf:
 
 	[...]
 	location /user_guide {
-      root /home/bnadland/codeigniter_template/;
-      index  index.html;
-  }
+		root /home/bnadland/codeigniter_template/;
+		index  index.html;
+	}
 	[...]
 
 Change the user directive to the user you're developing with and change the 
