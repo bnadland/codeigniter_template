@@ -1,0 +1,53 @@
+My CodeIgniter template
+=======================
+
+My development stack looks like this:
+
+* OpenBSD
+* nginx
+* php-fastcgi
+* CodeIgniter (current version in this template is: 2.1.0)
+
+Setup
+-----
+
+Install nginx and php-fastcgi:
+
+	$ sudo pkg_add nginx php-fastcgi
+
+Clone this repository as starting point:
+
+	$ git clone git://github.com/bnadland/codeigniter_template.git my_new_project
+
+Now change into the new project:
+
+	$ cd my_new_project
+
+Edit nginx/nginx.conf:
+
+	user bnadland;
+
+	[...]
+	location /user_guide {
+      root /home/bnadland/codeigniter_template/;
+      index  index.html;
+  }
+	[...]
+
+Change the user directive to the user you're developing with and change the 
+root directive to the my_new_project directory.
+
+Development
+-----------
+
+Start nginx:
+	
+	$ sudo nginx -p nginx -c nginx.conf 
+
+Start php-fastcgi:
+
+	$ php-fastcgi -b 127.0.0.1:9000 index.php
+
+Write your code as usual in the application directory.
+
+Hack away!
